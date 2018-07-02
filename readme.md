@@ -27,5 +27,6 @@ The script connects to RabbitMQ queue and consumes messages. Consumer expects me
 ```
 
 ## TODO
+- Catch parse errors when message is invalid json
 - Dynamic queue name via parameter
 - Support for messages without template (adds subject and content properties to message's json)
