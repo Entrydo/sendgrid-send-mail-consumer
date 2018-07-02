@@ -6,4 +6,4 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
-$dotenv->required()->notEmpty();
+$dotenv->required(['SENDGRID_API_KEY', 'RABBITMQ_HOST', 'RABBITMQ_PORT', 'RABBITMQ_USERNAME', 'RABBITMQ_PASSWORD']);
