@@ -6,7 +6,9 @@ Build tiny microservice, that will consume messages from RabbitMQ queue and send
 ## Install
 1. Create `.env` file (use `.env.example` as template) 
 2. Install composer using `composer install`
-3. Run the script via `php src/script.php`
+
+## Run
+- Run the script via `php src/script.php`
 
 ## How it works
 The script connects to RabbitMQ queue and consumes messages. Consumer expects messages to be in JSON format.
@@ -27,6 +29,11 @@ The script connects to RabbitMQ queue and consumes messages. Consumer expects me
 ```
 
 ## TODO
-- Catch parse errors when message is invalid json
-- Dynamic queue name via parameter
-- Support for messages without template (adds subject and content properties to message's json)
+- [ ] Catch parse errors when message is invalid json
+- [ ] Dynamic queue name via parameter
+- [ ] Support for messages without template (adds subject and content properties to message's json)
+- [ ] Dockerfile
+- [ ] Tests??
+- [ ] CI?
+- [ ] PHPSTAN?
+- [ ] Coding standard? 

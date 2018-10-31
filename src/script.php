@@ -40,6 +40,17 @@ $callback = function (AMQPMessage $msg) {
 		$mail->addTo($message->to->mail, $message->to->name);
 		$mail->setTemplateId($message->template_id);
 
+		// Example of how to send an attachment
+		/*
+		$fileEncoded = base64_encode(file_get_contents(__DIR__ . '/Vstupenka.pdf'));
+		$mail->addAttachment(
+			$fileEncoded,
+			'application/pdf',
+			'Vstupenka.pdf',
+			'attachment'
+		);
+		*/
+
 		$sendgrid = new SendGrid(getenv('SENDGRID_API_KEY'));
 
 		$response = $sendgrid->send($mail);
